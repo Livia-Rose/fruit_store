@@ -1,13 +1,12 @@
 # fruit store
 
 import mysql.connector as mpc
-
-
 con = mpc.connect(host="localhost", user="root", password="naeva", database="ms")
 cursor = con.cursor()
 
-insert_query = "Insert Into items (SI_no, Name, Quantity, Price) Values (%s, %s, %s, %s)"
 
+
+insert_query = "Insert Into items (SI_no, Name, Quantity, Price) Values (%s, %s, %s, %s)"
 def restock():
         
         SI_no = int(input("Enter no: "))
@@ -99,7 +98,7 @@ while True:
     choice = input("Enter your choice: ").strip()
     if choice == "1":
         s=int(input('enter password '))
-        if a==s:
+        if s==p:
             restock()
     elif choice == "2":
         buying()
